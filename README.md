@@ -31,12 +31,13 @@
   <a href="#快速开始"><strong>Quick Start</strong></a> ·
   <a href="./showcase"><strong>Showcase</strong></a> ·
   <a href="./showcase/wechat-bot/README.md"><strong>WeChat Bot</strong></a> ·
-  <a href="#关于-evamd"><strong>EVA.md</strong></a>
+  <a href="#关于-evamd"><strong>EVA.md</strong></a> ·
+  <a href="./README_ENG.md"><strong>🇬🇧 English</strong></a>
 </p>
 
 ## 简介
 
-EVA是个麻雀虽小、五脏俱全的Agent智能体，相当于低配版Claude Code，能帮你写脚本、写测试案例、执行shell、分析数据等。我自己就是EVA的重度用户，日常使用频率非常高。
+EVA是个麻雀虽小、五脏俱全的Agent智能体，相当于低配版Claude Code，能帮你写脚本、写测试案例、执行shell、分析数据等。我自己就是EVA的重度用户，日常处理各种任务。
 
 各种好玩案例见当前仓库的 [showcase](./showcase) 🦖🦖🦖
 
@@ -51,11 +52,11 @@ EVA是个麻雀虽小、五脏俱全的Agent智能体，相当于低配版Claude
 
 ## 快速开始
 
-0. 直接创建一个eva.py并复制本仓库的eva.py文本内容粘贴进去（docker环境、运维环境等也很容易粘贴代码，无需复杂安装，Just **Paste and Go**）。当然，你也可以git clone本仓库
+0. 直接创建一个eva.py并复制本仓库的eva.py文本内容粘贴进去（docker环境、运维环境等也很容易粘贴代码，无需复杂安装，Just **Paste and Go**）。当然，你也可以git clone本仓库。
 
 1. 在终端执行`export EVA_API_KEY=你的deepseek API key`（Windows系统则是`set`命令）
 
-EVA支持OpenAI接口形式的LLM，可以是Ollma、vLLM拉起的本地模型，也可以是DeepSeek、OpenAI等官网API。切换方法是设置`EVA_BASE_URL`, `EVA_MODEL_NAME`, `EVA_API_KEY`这三个环境变量。
+EVA支持OpenAI接口形式的LLM，可以是Ollma、vLLM拉起的本地模型，也可以是DeepSeek、OpenAI等官网API。切换方法是设置`EVA_BASE_URL`, `EVA_MODEL_NAME`, `EVA_API_KEY`这三个环境变量：
 
 Linux设置方法：
 
@@ -120,11 +121,13 @@ options:
 
 1、EVA运行过程可以随时打断，无论是打断LLM推理、打断工具执行、还是退出EVA，都是按 Ctrl + C
 
-2、打断是个很有用的行为，比如某个命令超时时间太久你不想再等待，或者你想起有个背景忘记向EVA澄清需要补充说明，或者你发现前面对话有错别字想做修正说明  —— **注意，无论何时你都可以 Ctrl + C 打断EVA，无论何时 🎯🎯**
+2、打断是个很有用的行为，比如某个命令超时时间太久你不想再等待，或者你想起有个背景忘记向EVA澄清需要补充说明，或者你发现前面对话有错别字需要重新问。
+
+3、打断后，可以继续输入新的问题，不需要重新启动EVA；如果想完全退出EVA，连续按两下Ctrl + C
 
 ## 关于 EVA.md
 
-`.eva/EVA.md`是EVA的设定，通过它你可以对EVA进行各种设定、甚至赋予它各种技能。除了手动编辑`EVA.md`，你可以在eva启动时让它“分析下xxx/xxx/skills目录中的可用技能，提炼线索到EVA.md中” 或者 “分析下skillhub上的xxx技能，提炼线索到EVA.md中”，然后重启eva即可  —— **EVA的事情EVA自己做 🤖🤖**
+`.eva/EVA.md`是EVA的设定，通过它你可以对EVA进行各种设定、甚至赋予它各种技能。除了手动编辑`EVA.md`，你可以在eva启动时让它"分析下xxx/xxx/skills目录中所有的文件，给我生成一份EVA.md"，EVA会自动生成设定内容。
 
 ## 贡献者 ✨
 
